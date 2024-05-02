@@ -37,8 +37,12 @@ const LoginForm = ({ onSubmit, buttonText }) => {
 const App = () => {
   const [openModal, setOpenModal] = useState('none')
 
-  const handleSubmit = formData => {
+  const login = formData => {
     console.log('login', formData)
+  }
+
+  const register = formData => {
+    console.log('register', formData)
   }
 
   return (
@@ -57,7 +61,7 @@ const App = () => {
           <span aria-hidden>Close</span>
         </button>
         <h3>Login</h3>
-        <LoginForm onSubmit={handleSubmit} buttonText="Login" />
+        <LoginForm onSubmit={login} buttonText="Login" />
       </Dialog>
       <Dialog aria-label="register-form" isOpen={openModal === 'register'}>
         <button onClick={() => setOpenModal('none')}>
@@ -65,6 +69,7 @@ const App = () => {
           <span aria-hidden>Close</span>
         </button>
         <h3>Register</h3>
+        <LoginForm onSubmit={register} buttonText="Login" />
       </Dialog>
     </>
   )
