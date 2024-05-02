@@ -56,7 +56,7 @@ const App = () => {
           <VisuallyHidden>Close</VisuallyHidden>
           <span aria-hidden>Close</span>
         </button>
-        <p>Login</p>
+        <h3>Login</h3>
         <LoginForm onSubmit={handleSubmit} buttonText="Login" />
       </Dialog>
       <Dialog aria-label="register-form" isOpen={openModal === 'register'}>
@@ -64,7 +64,7 @@ const App = () => {
           <VisuallyHidden>Close</VisuallyHidden>
           <span aria-hidden>Close</span>
         </button>
-        <p>Register</p>
+        <h3>Register</h3>
       </Dialog>
     </>
   )
