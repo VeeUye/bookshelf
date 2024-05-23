@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
 
-import 'bootstrap/dist/css/bootstrap-reboot.css'
-import '@reach/dialog/styles.css'
 import * as React from 'react'
 import {createRoot} from 'react-dom/client'
 import {Button, Input, FormGroup, Spinner} from './components/lib'
 import {Modal, ModalContents, ModalOpenButton} from './components/modal'
 import {Logo} from './components/logo'
+
+import 'bootstrap/dist/css/bootstrap-reboot.css'
+import '@reach/dialog/styles.css'
 
 function LoginForm({onSubmit, submitButton}) {
   function handleSubmit(event) {

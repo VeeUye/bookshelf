@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core'
 
 import * as React from 'react'
 import {createRoot} from 'react-dom/client'
+import {jsx} from '@emotion/core'
 
-import {Button, Input, FormGroup} from './components/lib.final'
+import {Button, Input, FormGroup, Spinner} from './components/lib.extra-3'
 import {Modal, ModalContents, ModalOpenButton} from './components/modal'
 import {Logo} from './components/logo'
 
@@ -45,7 +45,10 @@ function LoginForm({onSubmit, submitButton}) {
         <Input id="password" type="password" />
       </FormGroup>
 
-      <div>{React.cloneElement(submitButton, {type: 'submit'})}</div>
+      <div>
+        {React.cloneElement(submitButton, {type: 'submit'})}
+        <Spinner aria-label="loading" />
+      </div>
     </form>
   )
 }
